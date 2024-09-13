@@ -1,4 +1,6 @@
-*, *:before, *:after{
+*,
+*:before,
+*:after {
   box-sizing: border-box;
 }
 
@@ -14,15 +16,16 @@
   text-size-adjust: none;
 }
 
-body{
+body {
   line-height: 1;
 }
 
-ol, ul{
+ol,
+ul {
   list-style: none;
 }
 
-input{
+input {
   -webkit-appearance: none;
   border-radius: 0;
 }
@@ -33,5 +36,24 @@ input{
 }
 
 .App {
+  margin: 16px 0;
   width: 70%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.post-enter {
+  opacity: 0;
+}
+.post-enter-active {
+  opacity: 1;
+  transition: opacity 300ms ease-in;
+}
+.post-exit {
+  opacity: 1;
+}
+.post-exit-active {
+  opacity: 0;
+  transition: opacity 300ms ease-in;
 }
