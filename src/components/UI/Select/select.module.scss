@@ -1,0 +1,12 @@
+select {
+  outline: 0;
+  width: 11rem;
+  padding: 12px 8px;
+  background:
+    var(--arrow-icon) no-repeat right 0.8em center / 1.4em,
+    linear-gradient(to left, var(--arrow-bg) 3em, var(--select-bg) 3em);
+  color: mediumpurple;
+  border-radius: 0.25em;
+  cursor: pointer;
+  border: 2px solid mediumpurple;
+}
