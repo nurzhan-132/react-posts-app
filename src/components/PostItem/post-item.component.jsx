@@ -6,10 +6,10 @@ const PostItem = ({ post, remove, number }) => {
   return (
     <div className={styles["post"]}>
       <div className={styles["post-content"]}>
-        <strong>
-          {number} {post.title}
+        <strong className={styles["post-content-title"]}>
+          {post.id}. {post.title}
         </strong>
-        <div>{post.description}</div>
+        <div>{post.body}</div>
       </div>
       <div className={styles["post-btns"]}>
         <Button onClick={() => remove(post)}>Delete</Button>
