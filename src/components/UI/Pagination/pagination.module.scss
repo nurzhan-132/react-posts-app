@@ -1,0 +1,21 @@
+.page {
+  padding: 12px;
+  border: 1px solid mediumpurple;
+
+  cursor: pointer;
+  &-wrapper {
+    margin-top: 40px;
+    display: flex;
+  }
+  &-current {
+    color: white;
+    background: mediumpurple;
+    font-weight: 700;
+  }
+  &:first-child {
+    border-radius: 8px 0 0 8px;
+  }
+  &:last-child {
+    border-radius: 0 8px 8px 0;
+  }
+}
