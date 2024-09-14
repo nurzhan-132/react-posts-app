@@ -4,7 +4,7 @@ import Input from "../UI/Input/input.component";
 import Button from "../UI/Button/button.component";
 
 const PostForm = ({ create }) => {
-  const [post, setPost] = useState({ title: "", description: "" });
+  const [post, setPost] = useState({ title: "", body: "" });
 
   const addNewPost = (e) => {
     e.preventDefault();
@@ -15,7 +15,7 @@ const PostForm = ({ create }) => {
     };
 
     create(newPost);
-    setPost({ title: "", description: "" });
+    setPost({ title: "", body: "" });
   };
   return (
     <form action="" className={styles["form"]}>
@@ -28,8 +28,8 @@ const PostForm = ({ create }) => {
       <Input
         type="text"
         placeholder="Post description"
-        value={post.description}
-        onChange={(e) => setPost({ ...post, description: e.target.value })}
+        value={post.body}
+        onChange={(e) => setPost({ ...post, body: e.target.value })}
       />
       <Button onClick={addNewPost}>Create a post</Button>
     </form>

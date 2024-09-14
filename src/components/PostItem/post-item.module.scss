@@ -2,8 +2,14 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 16px;
   padding: 16px;
   margin-top: 16px;
   border: 2px solid mediumpurple;
   border-radius: 10px;
+  &-content {
+    &-title {
+      font-weight: bold;
+    }
+  }
 }
