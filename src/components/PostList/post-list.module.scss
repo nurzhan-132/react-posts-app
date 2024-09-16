@@ -12,3 +12,11 @@
   opacity: 0;
   transition: opacity 500ms ease-in;
 }
+
+.posts-title {
+  display: flex;
+  justify-content: flex-end;
+  h1 {
+    margin: auto;
+  }
+}

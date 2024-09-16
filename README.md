@@ -1,3 +1,42 @@
+## Posts Application
+
+This is a frontend project built with React that demonstrates key functionality such as creating, deleting, filtering, and paginating posts using a fake REST API from JSONPlaceholder. The primary focus of this project was to implement the core functionality and showcase my knowledge of React, rather than emphasize styling or CSS design.
+## Features
+
+    Authentication:
+        Users can login and logout via a basic form. The login state is managed using React context and stored in localStorage for session persistence.
+
+    Create Post:
+        Users can create new posts. These posts are dynamically rendered in the posts list upon submission.
+
+    Delete Post:
+        Users can delete posts from the list.
+
+    Routing:
+        The app uses React Router for navigation between pages, including posts, individual post details, and login/logout views. Unauthenticated users are redirected to the login page when necessary.
+
+    Pagination:
+        The posts list includes pagination controls, allowing users to browse through posts in chunks of data. The pagination logic dynamically fetches posts from the API.
+
+    Filter Posts:
+        Users can filter posts by title, enabling quick searches across the available post data.
+
+    Infinite Scroll:
+        The app uses an infinite scroll feature to load more posts as the user scrolls down the page, implementing IntersectionObserver for smooth, dynamic data fetching.
+
+## Tech Stack
+
+    React: Utilized for building the user interface and managing component states.
+    React Router: Implemented for routing and navigation between different pages.
+    Axios: Used for making HTTP requests to the JSONPlaceholder API.
+    Context API: Used to handle authentication and share the user’s login state across the app.
+    IntersectionObserver API: Used for implementing infinite scroll functionality.
+    LocalStorage: Utilized to persist the authentication state across page reloads.
+
+## Functionality Focus
+
+The primary focus of this project was on building robust functionality and implementing key frontend development concepts like authentication, CRUD operations, and dynamic data handling with pagination and filtering. The project emphasizes React component architecture, state management, and efficient interaction with REST APIs. CSS and styling are kept minimal to prioritize the implementation of core features.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

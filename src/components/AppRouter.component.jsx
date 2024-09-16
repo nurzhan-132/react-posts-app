@@ -1,17 +1,44 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Navigate, Route, Routes } from "react-router-dom";
-import About from "../pages/About";
-import Posts from "../pages/Posts";
-import Oops from "./Oops.component";
+import { publicRoutes, privateRoutes } from "../router/router";
+import { AuthContext } from "../context";
+import Skeleton from "./UI/Skeleton/skeleton.component";
 
 const AppRouter = () => {
+  const { isAuth, isLoading } = useContext(AuthContext);
+
+  if (isLoading) {
+    return <Skeleton />;
+  }
+
   return (
-    <Routes>
-      <Route path="/about" element={<About />} />
-      <Route path="/posts" element={<Posts />} />
-      <Route path="/oops" element={<Oops />} />
-      <Route path="*" element={<Navigate to="/oops" replace={true} />} />
-    </Routes>
+    <>
+      {isAuth ? (
+        <Routes>
+          {publicRoutes.map((route) => (
+            <Route
+              path={route.path}
+              element={route.component}
+              key={route.path}
+            />
+          ))}
+          <Route path="/login" element={<Navigate to="/posts" replace />} />
+          <Route path="/" element={<Navigate to="/posts" replace />} />
+          <Route path="*" element={<Navigate to="/oops" replace />} />
+        </Routes>
+      ) : (
+        <Routes>
+          {privateRoutes.map((route) => (
+            <Route
+              path={route.path}
+              element={route.component}
+              key={route.path}
+            />
+          ))}
+          <Route path="*" element={<Navigate to="/login" replace />} />
+        </Routes>
+      )}
+    </>
   );
 };
 
