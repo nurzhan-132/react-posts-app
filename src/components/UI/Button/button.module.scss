@@ -11,4 +11,10 @@
     background-color: mediumpurple;
     color: white;
   }
+  &-red {
+    &:hover {
+      background-color: orangered;
+      border: 2px solid orangered;
+    }
+  }
 }
